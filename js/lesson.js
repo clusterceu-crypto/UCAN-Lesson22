@@ -69,7 +69,6 @@
   }
   document.querySelectorAll('[data-route-link]').forEach(a=>a.addEventListener('click',e=>{
     e.preventDefault();showRoute(Number(a.dataset.routeLink));
-    if(innerWidth<921)el('route-menu').open=false;
   }));
   const onHistory=()=>{const i=routeIndex(location.hash);showRoute(i<0?0:i,{url:false});};
   addEventListener('popstate',onHistory);addEventListener('hashchange',onHistory);
@@ -85,7 +84,6 @@
     if(state.route===8&&!state.passed)return;
     showRoute(state.route+1);
   });
-  if(innerWidth<921)el('route-menu').open=false;
   el('reset-progress').addEventListener('click',()=>{
     if(!confirm('Почати заняття спочатку? Підсумкові відповіді й навчальний прогрес буде скинуто. Ваша записка у відкритій сторінці залишиться.'))return;
     state={route:0,submitted:false,passed:false,completed:false,attempts:0,selections:{}};

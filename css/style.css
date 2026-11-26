@@ -45,3 +45,13 @@
 .header .header-row .ucan-previous-lesson:hover{text-decoration:underline}
 .header .header-row .ucan-previous-lesson:focus-visible{outline:3px solid #e7a71f;outline-offset:2px}
 @media(max-width:680px){.header .header-row{flex-wrap:wrap;column-gap:8px;row-gap:6px}}
+
+/* Single horizontal section navigation on every screen. */
+.main-grid{display:block;width:min(calc(100% - 48px),970px);margin-top:12px}
+.lesson-route-nav{padding:4px 0 10px}
+.lesson-route-nav .route-links{display:flex;overflow-x:auto;overscroll-behavior-x:contain;gap:8px;padding:5px 4px 10px;scrollbar-width:thin}
+.lesson-route-nav .route-links a{flex:0 0 auto;min-height:44px;display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;padding:9px 13px;background:white;color:var(--forest);font-weight:700}
+.lesson-route-nav .route-links a[aria-current="page"]{background:var(--forest);border-color:var(--forest);color:#fff}
+.lesson-route-nav .route-links a:hover:not([aria-current="page"]):not([aria-disabled="true"]){background:var(--mint)}
+@media(max-width:680px){.main-grid{width:calc(100% - 24px)}.lesson-route-nav .route-links a{font-size:.82rem}}
+@media print{.lesson-route-nav{display:none}}
