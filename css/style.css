@@ -39,3 +39,9 @@
 #start > h1{font-size:clamp(2rem,3.5vw,2.75rem);line-height:1.2}
 .route h2{font-size:clamp(1.42rem,2.15vw,1.85rem);line-height:1.3}
 .route h3.source-paragraph{font-size:clamp(1.18rem,1.6vw,1.35rem);line-height:1.35}
+
+/* Link to the previous UCAN lesson. */
+.header .header-row .ucan-previous-lesson{display:inline-flex;align-items:center;justify-content:center;gap:.35em;flex:0 0 auto;min-height:42px;box-sizing:border-box;padding:6px 10px;border:1px solid currentColor;border-radius:9px;text-decoration:none;font-size:.8rem;font-weight:700;line-height:1.2;color:#fff}
+.header .header-row .ucan-previous-lesson:hover{text-decoration:underline}
+.header .header-row .ucan-previous-lesson:focus-visible{outline:3px solid #e7a71f;outline-offset:2px}
+@media(max-width:680px){.header .header-row{flex-wrap:wrap;column-gap:8px;row-gap:6px}}
